@@ -5,11 +5,13 @@ import { catchError, map } from 'rxjs/operators';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
+import { environment } from '../../environments/environment';
+
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  endpoint: string = 'http://localhost:3000';
+  endpoint: string = environment.apiUrl;
   currentUser = {};
   localStorage;
   constructor(

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs';
+import { environment } from './../../environments/environment';
 
 export interface ProductsPaginator {
   items: any[];
@@ -12,7 +13,7 @@ export interface ProductsPaginator {
   providedIn: 'root',
 })
 export class PostService {
-  endpoint: string = 'http://localhost:3000';
+  endpoint: string = environment.apiUrl;
   constructor(private http: HttpClient) {}
 
   getPost(page: number, size: number) {
