@@ -1,15 +1,13 @@
 <div class="bg-white p-8 rounded-lg shadow-md max-w-md w-full mb-4">
   <!-- User Info with Verified Button -->
   <div class="flex items-center mt-4">
-    <h2 class="text-xl font-bold text-gray-800">John Doe</h2>
+    <h2 class="text-xl font-bold text-gray-800">{{ user.fullName }}</h2>
   </div>
   <!-- Bio -->
-  <p class="text-gray-700 mt-2">
-    Web Developer | Cat Lover | Coffee Enthusiast
-  </p>
+  <p class="text-gray-700 mt-2">Age: {{ user.age }}</p>
 
   <button
-    type="submit"
+    (click)="logout()"
     class="flex mt-5 justify-center items-center bg-blue-500 hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue text-white py-2 px-4 rounded-md transition duration-300 gap-2"
   >
     Logout

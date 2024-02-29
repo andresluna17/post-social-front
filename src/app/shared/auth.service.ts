@@ -55,7 +55,7 @@ export class AuthService {
   doLogout() {
     let removeToken = this.localStorage?.removeItem('access_token');
     if (removeToken == null) {
-      this.router.navigate(['log-in']);
+      this.router.navigate(['login']);
     }
   }
   // User profile

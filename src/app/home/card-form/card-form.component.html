@@ -1,5 +1,5 @@
 <div class="bg-white p-8 rounded-lg shadow-md max-w-md w-full">
-  <form>
+  <form [formGroup]="postForm" (ngSubmit)="createPost()">
     <!-- Post Content Section -->
     <div class="mb-6">
       <label
@@ -10,6 +10,7 @@
       <input
         id="postContent"
         name="title"
+        formControlName="title"
         class="w-full border-2 rounded-md px-4 py-2 leading-5 transition duration-150 ease-in-out sm:text-sm sm:leading-5 resize-none focus:outline-none focus:border-blue-500"
         placeholder="What's on your mind?"
       />
@@ -21,8 +22,9 @@
         >Post Content:</label
       >
       <textarea
-        id="postContent"
-        name="postContent"
+        id="content"
+        name="content"
+        formControlName="content"
         rows="4"
         class="w-full border-2 rounded-md px-4 py-2 leading-5 transition duration-150 ease-in-out sm:text-sm sm:leading-5 resize-none focus:outline-none focus:border-blue-500"
         placeholder="What's on your mind?"

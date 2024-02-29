@@ -8,13 +8,7 @@ import { CommonModule, DOCUMENT } from '@angular/common';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
-    RouterOutlet,
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
-    CommonModule,
-  ],
+  imports: [RouterOutlet, HttpClientModule, FormsModule, ReactiveFormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   providers: [AuthService],
